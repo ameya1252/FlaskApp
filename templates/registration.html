@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Register</h1>
+    <form method="post" action="{{ url_for('register') }}" enctype="multipart/form-data">
+        Username: <input type="text" name="username"><br>
+        First Name: <input type="text" name="first_name"><br>
+        Last Name: <input type="text" name="last_name"><br>
+        Email: <input type="email" name="email"><br>
+        Password: <input type="password" name="password"><br>
+        File: <input type="file" name="file"><br>
+        <input type="submit" value="Register">
+    </form>
+    <a href="/login">Login</a>
+{% endblock %}
